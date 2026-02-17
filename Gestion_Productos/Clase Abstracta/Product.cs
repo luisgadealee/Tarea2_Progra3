@@ -65,39 +65,17 @@ namespace Gestion_Productos.Clase_Abstracta
         }
 
         // ===================================================
-        // MÉTODOS ABSTRACTOS (OBLIGATORIOS PARA LAS CLASES HIJAS)
+        // MÉTODOS ABSTRACTOS (OBLIGATORIOS PARA LAS CLASES QUE VAN A HEREDAR)
         // ===================================================
 
         /// <summary>
-        /// MÉTODO ABSTRACTO: Las clases hijas DEBEN implementarlo
+        /// MÉTODO ABSTRACTO: Las clases que van a heredar DEBEN implementarlo
         /// Muestra en consola los detalles específicos del producto
+        /// La idea de este metodo es que si o si exista cuando se herede la clase, 
+        /// pero cada clase hija puede moldearlo a su manera dependiendo del tipo de producto
+        /// (ej: una laptop puede mostrar RAM y procesador, mientras que un mouse puede mostrar tipo de conexión)
         /// </summary>
         public abstract void MostrarDetalles();
-
-        // ===================================================
-        // MÉTODOS VIRTUALES (OPCIONALES PARA LAS CLASES HIJAS)
-        // ===================================================
-
-        /// <summary>
-        /// MÉTODO VIRTUAL: Las clases hijas PUEDEN sobreescribirlo
-        /// Devuelve el tipo de producto (puede ser personalizado)
-        /// </summary>
-        /// <returns>String con el tipo de producto</returns>
-        public virtual string ObtenerTipoProducto()
-        {
-            return "Producto Genérico";
-        }
-
-        /// <summary>
-        /// MÉTODO VIRTUAL: Calcula el precio final
-        /// Por defecto retorna el precio base
-        /// Las clases hijas pueden agregar descuentos, impuestos, etc.
-        /// </summary>
-        /// <returns>Precio final del producto</returns>
-        public virtual decimal CalcularPrecioFinal()
-        {
-            return Precio;
-        }
 
         // ===================================================
         // MÉTODOS DE UTILIDAD
