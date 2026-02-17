@@ -43,9 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clase Abstracta\Product.cs" />
+    <Compile Include="Clase Abstracta\Producto.cs" />
     <Compile Include="Consola\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pruebas\ProductoPrueba.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
